@@ -1,0 +1,135 @@
+/* LoginPopup.css */
+
+.login-pop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it sits on top of other content */
+}
+
+.login-popup-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px; /* Set a max-width for larger screens */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  position: relative;
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-popup-title h2 {
+  font-size: 1.5rem; /* Responsive heading */
+  color: #333; /* Dark text color */
+}
+
+.login-popup-title img {
+  cursor: pointer;
+  width: 25px; /* Icon size */
+  height: 25px;
+  transition: transform 0.2s ease; /* Scale effect on hover */
+}
+
+.login-popup-title img:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between inputs */
+}
+
+.login-popup-inputs input {
+  padding: 10px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Base font size */
+  transition: border-color 0.3s; /* Smooth border transition */
+}
+
+.login-popup-inputs input:focus {
+  border-color: tomato; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  background-color: tomato; /* Primary button color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  top: 10px;
+}
+
+button:hover {
+  background-color: #e63946; /* Darker shade on hover */
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.login-popup-condition p {
+  margin-left: 10px;
+  font-size: 0.9rem; /* Smaller text */
+}
+
+.login-popup-condition input[type="checkbox"] {
+  cursor: pointer; /* Pointer for checkbox */
+}
+
+.login-popup-condition span {
+  color: tomato; /* Link color */
+  cursor: pointer; /* Pointer on hover */
+  transition: color 0.2s; /* Smooth transition for color change */
+}
+
+.login-popup-condition span:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+p {
+  margin-top: 15px;
+  text-align: center; /* Center text for better alignment */
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+p span {
+  color: tomato; /* Link color */
+  cursor: pointer; /* Pointer for span */
+  transition: color 0.2s; /* Smooth transition */
+}
+
+p span:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .login-popup-container {
+    padding: 15px; /* Adjust padding for small screens */
+  }
+
+  button {
+    font-size: 0.9rem; /* Smaller font size for buttons */
+  }
+}

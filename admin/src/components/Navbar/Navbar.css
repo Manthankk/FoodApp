@@ -1,0 +1,51 @@
+/* Navbar.css */
+
+/* General styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white; /* Primary theme color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for a modern feel */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Logo styles */
+.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Profile image styles */
+.profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; /* Circular profile image */
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+/* Add a hover effect for the profile */
+.profile:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .profile {
+    height: 30px;
+    width: 30px;
+  }
+}

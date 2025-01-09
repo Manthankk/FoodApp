@@ -1,0 +1,165 @@
+/* Navbar.css */
+
+.navbar {
+  padding: 20px 10px; /* Adjusted for smaller screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 150px; /* You might need to adjust this if the logo scales */
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navbar button {
+  background: transparent;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  color: #49557e;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background: tomato;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  transform: translate(-50%, -50%);
+  min-width: 10px;
+  min-height: 10px;
+  background: tomato;
+  border-radius: 5px;
+  animation: dot-animation 2s infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px; /* Reduce padding */
+  }
+
+  .navbar-menu {
+    display: none; /* Slightly smaller text */
+  }
+
+  .navbar-right {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px; /* Reduce padding */
+    gap: 20px; /* Space between buttons */
+    margin-top: 15px; /* Space above buttons */
+  }
+
+  .navbar button {
+    width: 100%; /* Full width buttons on smaller screens */
+    padding: 12px; /* Adjust padding */
+  }
+
+  .navbar-logo {
+    margin-bottom: 15px; /* Space below logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu {
+    font-size: 14px; /* Even smaller text for very small screens */
+  }
+
+  .navbar button {
+    font-size: 14px; /* Smaller font size for buttons */
+    padding: 10px; /* Adjust button padding */
+  }
+}
+
+/* Profile section styles */
+.navbar-profile {
+  position: relative; /* Needed for positioning the dropdown */
+}
+
+.navbar-profile img {
+  width: 32px; /* Adjust size of the profile icon */
+  height: 32px; /* Ensure it's square */
+  border-radius: 50%; /* Make it circular */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Dropdown menu styles */
+.nav-profile-dropdown {
+  position: absolute;
+  top: 38px; /* Positioning below the profile icon */
+  right: 0; /* Align dropdown to the right */
+  background: white; /* Background color for the dropdown */
+  border: 1px solid #ddd; /* Border for dropdown */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack items vertically */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex; /* Show dropdown on hover */
+}
+
+.nav-profile-dropdown li {
+  padding: 10px 20px; /* Spacing for dropdown items */
+  cursor: pointer; /* Pointer cursor for items */
+  display: flex; /* Flex for icon and text alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-profile-dropdown li:hover {
+  background: #f5f5f5; /* Highlight on hover */
+}
+
+.nav-profile-dropdown hr {
+  margin: 0; /* Remove margin for horizontal rule */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-profile img {
+    width: 35px; /* Adjust profile icon size for smaller screens */
+    height: 35px; /* Ensure it's square */
+  }
+
+  .nav-profile-dropdown {
+    top: 45px; /* Adjust position for smaller screens */
+  }
+}

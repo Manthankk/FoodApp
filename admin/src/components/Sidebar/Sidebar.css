@@ -1,0 +1,78 @@
+/* Sidebar.css */
+
+/* General sidebar container */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: tomato; /* Primary theme color */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow for modern look */
+  position: fixed; /* Fix the sidebar on the left side */
+}
+
+/* Options container */
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Individual option styling */
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: white; /* Contrasting background for option */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Option hover effect */
+.sidebar-option:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly lighter on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Icon styling */
+.sidebar-option img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Text styling */
+.sidebar-option p {
+  font-size: 16px;
+  font-weight: bold;
+  color: tomato; /* Text color same as primary theme */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100px; /* Make sidebar narrower on mobile */
+    padding: 10px;
+  }
+
+  .sidebar-option {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .sidebar-option img {
+    margin-right: 0;
+    margin-bottom: 5px; /* Adjust for vertical layout */
+  }
+
+  .sidebar-option p {
+    font-size: 12px; /* Smaller text on mobile */
+  }
+}
+.sidebar-option.active {
+  background-color: #4caf50; /* Green for active option */
+  color: white; /* White text for active option */
+}

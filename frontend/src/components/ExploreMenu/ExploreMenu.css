@@ -1,0 +1,102 @@
+/* ExploreMenu.css */
+
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px; /* Added padding for spacing */
+}
+
+.explore-menu h1 {
+  color: #262626;
+  font-size: 2.5rem; /* Changed to 'rem' for better scaling */
+}
+
+.explore-menu-text {
+  max-width: 60%;
+  color: #808080;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+  margin: 30px 20px;
+  overflow-x: auto; /* Use 'auto' for more control over scroll behavior */
+}
+
+.menu-list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.explore-menu-list-item img {
+  width: 7.5vw;
+  min-width: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s ease; /* Smooth scaling */
+}
+
+.explore-menu-list-item img:hover {
+  transform: scale(1.1);
+}
+
+.explore-menu-text p {
+  margin-top: 10px;
+  color: #747474;
+  font-size: max(1.4vw, 16px);
+  cursor: pointer;
+}
+
+.explore-menu hr {
+  margin: 10px 0;
+  height: 2px;
+  background-color: #ccc;
+  border: none;
+}
+
+.explore-menu-list-item .active {
+  border: 4px solid tomato;
+  padding: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .explore-menu h1 {
+    font-size: 2rem; /* Slightly smaller heading */
+  }
+
+  .explore-menu-text {
+    max-width: 80%; /* Wider content area on smaller screens */
+  }
+
+  .menu-list {
+    flex-direction: row; /* Stack items on smaller screens */
+    gap: 20px; /* Reduce gap */
+    margin: 20px 10px; /* Adjust margins */
+  }
+
+  .explore-menu-list-item img {
+    width: 15vw; /* Larger images on smaller screens */
+  }
+
+  .explore-menu-text p {
+    font-size: max(2vw, 14px); /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-menu h1 {
+    font-size: 1.5rem; /* Even smaller heading for very small screens */
+  }
+
+  .menu-list {
+    gap: 10px; /* Reduce gap even further */
+  }
+
+  .explore-menu-text p {
+    font-size: max(3vw, 12px); /* Smaller paragraph text */
+  }
+}
